@@ -35,6 +35,7 @@ const signin = async(req,res,next) => {
 
     res.cookie("access_token",token,{
       httpOnly:true,
+      domain: 'pacific-powerplant.netlify.app',
     })
     .status(200).json(others);
   }catch(err){
