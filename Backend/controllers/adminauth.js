@@ -34,10 +34,9 @@ const signin = async(req,res,next) => {
     const  { password, ...others} = admin._doc;
 
     res.cookie("access_token",token,{
-      httpOnly: false, // remove httpOnly
-    domain: 'pacific-powerplant.netlify.app',
+      httpOnly: true, // remove httpOnly
     secure: true, // only send over https
-    sameSite: 'none' 
+      sameSite: 'None', //cross-site cookie 
     })
     .status(200).json(others);
   }catch(err){
