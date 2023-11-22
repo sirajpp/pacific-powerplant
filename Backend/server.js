@@ -12,7 +12,7 @@ const cookieParser = require("cookie-parser");const app = express();
 const connectDatabase = require('./config/database');
 dotenv.config({path :path.join(__dirname, "config/.env")});
 const corsOptions = {
-    origin: 'https://pacific-powerplant.netlify.app/',
+    origin: 'https://pacific-powerplant.netlify.app',
     credentials: true,
   };
 
@@ -20,7 +20,7 @@ const corsOptions = {
 
 connectDatabase()
 app.use((req, res, next) => {
-    res.setHeader('Access-Control-Allow-Origin', 'https://pacific-powerplant.netlify.app/');
+    res.setHeader('Access-Control-Allow-Origin', 'https://pacific-powerplant.netlify.app');
     res.setHeader('Access-Control-Allow-Credentials', 'true');
     next();
   });
