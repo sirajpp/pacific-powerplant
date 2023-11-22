@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./work.css";
+
 import Work from "./Work";
 import Testimonials from "../testimonials/Testimonials";
 import axios from "../../axios";

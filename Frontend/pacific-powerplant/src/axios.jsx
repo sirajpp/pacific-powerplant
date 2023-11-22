@@ -1,7 +1,7 @@
 import axios from "axios";
 axios.defaults.withCredentials = true;
 const instance = axios.create({
-  baseURL: "http://localhost:8000/api",
+  baseURL: "https://pacific-powerplant.onrender.com/api",
 });
 
 export default instance;

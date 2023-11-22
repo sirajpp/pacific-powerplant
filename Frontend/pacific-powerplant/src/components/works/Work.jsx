@@ -1,5 +1,5 @@
 import React,{useState} from "react";
-import "./Work.css";
+// import "./Work.css";
 import { useSelector } from "react-redux";
 import DeleteWork from "./DeleteWork";
 const Work = ({ work }) => {
