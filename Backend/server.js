@@ -11,26 +11,16 @@ const works = require('./routes/works')
 const cookieParser = require("cookie-parser");const app = express();
 const connectDatabase = require('./config/database');
 dotenv.config({path :path.join(__dirname, "config/.env")});
-const whiteList = [
-  "https://pacific-powerplant.netlify.app",
-  "https://127.0.0.1:5500",
-  "http://localhost:5173",
-];
 const corsOptions = {
-  origin: (origin, callback) => {
-    if (whiteList.indexOf(origin) !== -1 || !origin) {
-      callback(null, true);
+    origin: 'https://pacific-powerplant.netlify.app/',
+    credentials: true,
+  };
 
-    } else {
-      callback(new Error("Not allowed CORS"));
-    }
-  },
-  credentials: true,
-};
+
 
 connectDatabase()
 app.use((req, res, next) => {
-    res.setHeader('Access-Control-Allow-Origin', 'https://pacific-powerplant-47be.onrender.com/');
+    res.setHeader('Access-Control-Allow-Origin', 'https://pacific-powerplant.netlify.app/');
     res.setHeader('Access-Control-Allow-Credentials', 'true');
     next();
   });
