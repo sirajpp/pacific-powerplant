@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Belanosima&family=Ysabeau+SC:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.Belanosima {
+  font-family: "Belanosima", sans-serif;
+}
+
+.YsabeauSC {
+  font-family: "Ysabeau SC", serif;
+  font-weight: 300;
+}
+
+.josefin {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.btn {
+  text-transform: inherit;
+}
+.custom-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+@layer utilities {
+  @variants responsive {
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .no-scrollbar {
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+    }
+  }
+}
+::-webkit-scrollbar {
+  width: 8px; /* Adjust the width as needed */
+}
+
+/* Set the color of the scrollbar thumb (the draggable part) */
+::-webkit-scrollbar-thumb {
+  background: rgba(206, 253, 255, 0.711);
+}
+
+/* Handle the scrollbar on Firefox */
+/* For Firefox, you can use the `scrollbar-color` property */
+/* Set the color of the scrollbar thumb and track */
+* {
+  scrollbar-color: rgba(11, 1, 25, 0.933); /* Adjust the color as needed */
+  scrollbar-width: bold; /* Adjust the width as needed */
+  scrollbar-shadow-color: black;
+}
+.bck {
+  background: rgb(2, 9, 23);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 9, 23, 1) 50%,
+    rgba(1, 46, 53, 0.711) 100%
+  );
+  height: 100%;
+  width: 100%;
+}
