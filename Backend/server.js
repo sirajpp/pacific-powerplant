@@ -12,7 +12,7 @@ const cookieParser = require("cookie-parser");const app = express();
 const connectDatabase = require('./config/database');
 dotenv.config({path :path.join(__dirname, "config/.env")});
 const whiteList = [
-  "https://Pacific-PowerPlant.onrender.com/",
+  "https://pacific-powerplant.netlify.app",
   "https://127.0.0.1:5500",
   "http://localhost:5173",
 ];
