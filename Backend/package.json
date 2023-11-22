@@ -4,8 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "dev": "nodemon server.js",
-    "build":"npm i"
+    "dev": "nodemon server.js"
+  
   },
   "author": "santhosh kumar",
   "license": "ISC",
